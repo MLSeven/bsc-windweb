@@ -1,0 +1,434 @@
+﻿@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+}
+
+/*
+p {
+	margin-block-start: 0em;
+	margin-block-end: 0em;
+}
+*/
+
+/*Default setting for the page document*/
+body {
+    background-color: #FFFFFF;
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 1.0em;
+    color: #555555;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-attachment: fixed;
+    background-image: url(/bsc/bscbackground.jpg);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+}
+/* Overlay on background body image white .75% transparent - on all pages*/
+.bscpage {
+    background-color: rgba(255,255,255,0.75);
+    padding: 1%;
+    margin: 2%;
+    
+}
+
+.bsccontent {
+    color: #555555;
+    background-color: #FFFFFF;
+    font-size: 0.9em;
+    padding: 1%;
+    margin: 1%;
+    overflow-x: auto;
+}
+
+.winddials {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+}
+
+.mere {
+    margin-left: auto;
+    position: relative;
+}
+
+.merechart {
+    max-width:100%;
+    height:auto;
+}
+
+/* place a background image of the Mere - hide on small screens*/
+.bscmere {
+    background-image: url(/bsc/budworthmere.jpg);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 100%;
+    padding: 0;
+    margin: 1%;
+}
+
+@media screen and (max-width: 760px) {
+    .bscmere {
+        background-image: none;
+    }
+}
+
+h1 {
+    font-size: 1.2em;
+}
+
+h2 {
+    font-size: 1.1em;
+}
+
+h3 {
+    font-size: 1.05em;
+}
+
+/* BSC Header Logo and page title*/
+.bsclogo {
+    float: none;
+    max-width: 100%;
+}
+
+.bsctitles {
+    margin: 1%;
+    padding: 2%;
+    background: linear-gradient(to bottom, #0e0e4f 0%,#000080 50%,#0048b3 100%);
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 760px) {
+    .bsctitles {
+        font-size: 0.85em;
+    }
+}
+
+/*
+div.bsctitles h2 {
+	color: #FFFFFF;
+    background-color:inherit;
+    font-size:1.05em;
+}
+div.bsctitles p {
+	color: #FFFFFF;
+	background-color: inherit;
+	font-size: 0.95em;
+}
+*/
+/* Horizontal Menu Styling*/
+.bscmenu {
+    margin: 1%;
+    font-size: 0.9em;
+}
+
+    .bscmenu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #AF0000;
+    }
+
+    .bscmenu li {
+        float: left;
+    }
+
+        .bscmenu li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+    .bscmenu a:hover:not(.active) {
+        background-color: #FC0000;
+    }
+
+
+
+/*
+td {
+	font-size: 100%;
+	padding-top: 0.2em;
+	padding-right: 0.5em;
+	padding-bottom: 0.2em;
+	padding-left: 0.5em;
+	color: #222222;
+}
+*/
+/* Tables */
+.bsctable {
+    color: #555555;
+    background-color: #FFFFFF;
+    font-size: 1.0em;
+    padding: 1%;
+    width: 100%;
+    border-collapse: collapse;
+    display: table;
+}
+/* Main table Header style*/
+
+.bsctable thead > tr > th {
+    font-size: 1.15em;
+    background-color: #0048b3;
+    color: #FFFFFF;
+}
+
+.bsctable tbody {
+    border-bottom-width: 6px;
+    border-bottom: solid;
+}
+/* Sub Table (tbody)Header style*/
+.bsctable tbody > tr > th {
+    font-size: 1.05em;
+    background-color: #0048b3;
+    color: #FFFFFF;
+    padding-top: 2%;
+    padding-bottom: 1%;
+}
+
+.bsctable caption {
+    color: #AF0000;
+    font-size: 1.05em;
+}
+
+.bsctable td, .bsctable th {
+    padding-top: 0.2em;
+    padding-right: 0.5em;
+    padding-bottom: 0.2em;
+    padding-left: 0.5em;
+}
+
+
+.bsctable tr:nth-child(even) {
+    background-color: #F2F2F2;
+}
+
+.bscrowdivider {
+    color: #AF0000;
+    font-size: 1.2em;
+    padding-top: 3%;
+    padding-bottom: 1%;
+}
+
+/* Mere view Layout */
+.back {
+    width: 100%;
+    float: left;
+}
+
+
+/* Style Content to be 2 Columns. Use bscrow full width and bsccolumn for 2 columns 
+which will collaps ro 1 on small screens */
+
+.bscrow {
+    color: #555555;
+    background-color: #FFFFFF;
+    font-size: 0.9em;
+    padding: 1%;
+    margin: 1%;
+}
+
+.bsccolumn {
+    float: left;
+    padding: 1%;
+    width: 50%;
+}
+/* Clear floats after the columns */
+.bscrow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 760px) {
+    .bsccolumn {
+        width: 100%;
+    }
+}
+
+.bscgaugesrow {
+    color: #555555;
+    /*background-color:#FFFFFF;*/
+    font-size: 0.9em;
+    padding: 1%;
+    margin: 1%;
+    width: 100%;
+}
+
+.bscgaugescolumn {
+    display: block;
+    float: left;
+    padding: 0;
+    width: 25%;
+}
+
+/* Responsive layout Split to 2 Columns*/
+@media screen and (max-width: 1023px) {
+    .bscgaugescolumn {
+        width: 50%;
+    }
+}
+/* Responsive layout single column*/
+@media screen and (max-width: 600px) {
+    .bscgaugescolumn {
+        width: 100%;
+    }
+}
+/* Clear floats after the columns */
+.bscgaugesrow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Create a similar layout for the Gauges buy use 3 columns */
+
+.bscprimary-logo {
+    padding: 10px;
+    float: none;
+    display: block;
+}
+
+.bscalmanac {
+    margin: 2%;
+    padding: 10px;
+}
+
+a {
+    color: #FF6600;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+    a:visited {
+        text-decoration: none;
+        color: #CC6600;
+    }
+
+    a:hover {
+        text-decoration: underline overline;
+        color: #6F9DBE;
+    }
+
+    a:active {
+        text-decoration: none;
+    }
+
+
+/* CumulusMX Credits standard CSS */
+.credits {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 70%;
+    font-style: italic;
+    text-transform: lowercase;
+    letter-spacing: 0.3em;
+    text-align: right;
+}
+
+.blockquote {
+    background-color: #E7E7DE;
+    margin-right: 22%;
+}
+
+caption {
+    font-size: 95%;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: .1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.25em;
+    text-align: left;
+}
+
+table {
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    width: 100%;
+}
+
+.tableseparator_temp {
+    font-size: 90%;
+    font-weight: 400;
+    background-color: #678090;
+    color: #CCCCCC;
+    padding: .5em;
+    letter-spacing: .1em;
+}
+
+.tableseparator_rainfall {
+    font-size: 90%;
+    font-weight: 400;
+    background-color: #8499A7;
+    color: #CCCCCC;
+    padding: .5em;
+    letter-spacing: .1em;
+}
+
+.tableseparator_wind {
+    font-size: 90%;
+    font-weight: 400;
+    background-color: #A2B1BD;
+    color: #666666;
+    padding: .5em;
+    letter-spacing: .1em;
+}
+
+.tableseparator_pressure {
+    font-size: 90%;
+    font-weight: 400;
+    background-color: #C0CAD3;
+    color: #666666;
+    padding: .5em;
+    letter-spacing: .1em;
+}
+
+.td_thumbnails {
+    padding-top: 0.1em;
+    padding-right: 0.2em;
+    padding-bottom: 0.1em;
+    padding-left: 0.0em;
+}
+
+.td_temperature_data {
+    background-color: #F1D3B7;
+}
+
+.td_rainfall_data {
+    background-color: #F5E0CC;
+}
+
+.td_wind_data {
+    background-color: #F9EDE1;
+}
+
+.td_pressure_data {
+    background-color: #FDFAF6;
+}
+
+.td_navigation_bar {
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    letter-spacing: 0.2em;
+    background-color: #ffffff;
+}
+
+.labels {
+    font-weight: bold;
+    background-position: left;
+}
+
+.site_data {
+    text-align: right;
+}
+
+.colon_separator {
+    font-weight: 400;
+    background-position: left;
+}
